@@ -1,0 +1,33 @@
+.atomicDesign{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.partOne{
+  width: 50%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.titles{
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons button{
+  margin-top: 10px;
+}
+
+.partTwo{
+  width: 50%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

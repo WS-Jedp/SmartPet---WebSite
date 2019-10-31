@@ -10,17 +10,21 @@ import { AppComponent } from './app.component';
 // Router
 import {AppRoutingModule} from '../app-routing.module';
 import { LandingPageComponent } from './Landing/landing-page/landing-page.component';
+import { AtomicDesignComponent } from './AtomicDesign/atomic-design/atomic-design.component';
+import { FooterLandingPageComponent } from './Landing/footer-landing-page/footer-landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    AtomicDesignComponent,
+    FooterLandingPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -19,6 +19,8 @@ Purple = #a176f4
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  font-family: 'Poppins';
+  font-weight: 300;
 }
 
   /* Hr */
@@ -48,38 +50,62 @@ Purple = #a176f4
  h1{
    color: #5c92ff;
    font-size: 6rem;
-   font-weight: bold;
+   font-family: 'Ubuntu';
+   font-weight: 700;
  }
  h2{
    color: #5c92ff;
    font-size: 3.5rem;
-   font-weight: bolder;
+   font-family: 'Ubuntu';
+   font-weight: 500;
  }
 
  h3{
    color: #a176f4;
    font-size: 3rem;
-   font-weight: bold;
+   font-family: 'Ubuntu';
+   font-weight: 700;
  }
  h4{
    color: #a176f4;
    font-size: 2.5rem;
-   font-weight: bolder;
+   font-family: 'Ubuntu';
+   font-weight: 500;
  }
  h5{
-   color: #333333;
-   font-size: 2rem;
+   color: white;
+    font-family: 'Ubuntu';
+    font-weight: 500;
  }
+
+/* -------------- Lists --------------- */
+li{
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+footer li{
+  color: #333333;
+  padding: 0 !important;
+}
 
 /*--------------- Buttons ----------------- */
 
 .btnSmart{
+  min-width: 10rem;
   padding: 0.4rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   border-radius: 4px;
+  font-family: 'Ubuntu';
+  font-weight: 700;
+  box-sizing: border-box;
 }
 
     /* Btn Blue */
@@ -152,21 +178,131 @@ Purple = #a176f4
 
 /* ---------- Cards ------------ */
 .card-lg{
-  min-width: 50%;
-  max-width: 50%;
-  min-height: 85vh;
-  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
   background-color: white;
   border: solid 1px #a176f4;
   border-radius: 5px;
   box-shadow: 0 0 0 0 #5c92ff;
   transition: 0.4s ease-out;
+  cursor: pointer;
+  padding: 1rem;
+  box-sizing: border-box;
 }
-
 .card-lg:hover{
   box-shadow: 0 0 30px 2px #5c92ff;
 }
 
+.card-md{
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 80vh;
+  max-height: 80vh;
+  background-color: white;
+  border: solid 1px #a176f4;
+  border-radius: 5px;
+  box-shadow: 0 0 0 0 #a176f4;
+  transition: 0.4s ease-out;
+  cursor: pointer;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.card-md:hover{
+  box-shadow: 0 0 30px 2px #a176f4;
+}
+
+.card-sm{
+
+  min-height: 50vh;
+  max-height: 50vh;
+  background-color: white;
+  border: solid 1px #a176f4;
+  border-radius: 5px;
+  box-shadow: 0 0 0 0 #5c92ff;
+  transition: 0.4s ease-out;
+  cursor: pointer;
+  padding: 1rem;
+  text-align: center;
+}
+.card-sm:hover{
+  box-shadow: 0 0 30px 2px #5c92ff;
+}
+
+.card-price{
+  min-height: 50vh;
+  max-height: 50vh;
+  background-color: white;
+  border: solid 1px #a176f4;
+  border-radius: 5px;
+  box-shadow: 0 0 0 0 #5c92ff;
+  transition: 0.4s ease-out;
+  cursor: pointer;
+  padding: 1rem;
+  text-align: center;
+}
+.card-price:hover{
+  box-shadow: 0 0 30px 2px #5c92ff;
+}
+
+
+/* -------------- Stars ------------  */
+.starCircle{
+  padding: 35%;
+  border-radius: 50%;
+  background-color: #a862ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.starCircle:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(135, 117, 217);
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(40px);
+}
+
+.circlePrice{
+  min-width: 180px;
+  width: 180px;
+  height: 180px;
+  min-height: 180px;
+  border-radius: 100%;
+  border: solid 2px #a176f4;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+}
+.circlePrice:before{
+  content: '';
+  width: 180px;
+  height: 180px;
+  min-height: 180px;
+  border-radius: 100%;
+  border: none;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 18px 1px #a176f4;
+
+}
 /* --------------- Form imputs ------------- */
 
 input[type="text"]{
@@ -226,6 +362,12 @@ input[type="text"]:focus{
 
 
  /* ---------- Color text -------------- */
+p{
+  color: white;
+  font-size: 3vh;
+  box-sizing: border-box;
+}
+
  .text-black{
    color: #333333;
  }
@@ -259,3 +401,34 @@ input[type="text"]:focus{
   background-image: -moz-linear-gradient( 112deg, rgb(130,86,239) 0%, rgb(86,57,180) 11%, rgb(41,28,120) 100%);
   background-image: -webkit-linear-gradient( 112deg, rgb(130,86,239) 0%, rgb(86,57,180) 11%, rgb(41,28,120) 100%);
 }
+
+/* ---------- Icons ----------- */
+.iconsMedia{
+  padding: 5px;
+}
+
+.mediaSocial:hover{
+  fill:-moz-linear-gradient( 90deg, rgb(106,130,222) 0%, rgb(163,106,212) 100%);
+  fill:-webkit-linear-gradient( 90deg, rgb(106,130,222) 0%, rgb(163,106,212) 100%);
+}
+
+
+.mediaSocial{
+  fill: #a176f4;
+  fill-rule: evenodd;
+  transition: 0.3s ease-in-out;
+}
+
+.icon-checked {
+  font-size: 40px;
+  fill: #9f6;
+  font-family: "Segoe MDL2 Assets";
+}
+
+.icon-down {
+  fill-rule: evenodd;
+  fill: url(#linear-gradient);
+}
+
+/* ------- Responsive things --------- */
+@media (min-width:)

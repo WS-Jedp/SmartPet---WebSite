@@ -1,12 +1,3 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
-  <defs>
-    <style>
-      .cls-1 {
-        font-size: 40px;
-        fill: #9f6;
-        font-family: "Segoe MDL2 Assets";
-      }
-    </style>
-  </defs>
-  <text id="Checked" class="cls-1" x="-0.299" y="39.951"></text>
+  <text id="Checked" class="icon-checked" x="-0.299" y="39.951"></text>
 </svg>

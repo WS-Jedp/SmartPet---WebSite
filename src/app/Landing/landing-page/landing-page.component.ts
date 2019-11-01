@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, AfterViewInit } from '@angular/core';
+declare var Swiper: any;
 
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.css']
 })
-export class LandingPageComponent implements OnInit {
+export class LandingPageComponent implements AfterViewInit {
 
-  constructor() { }
+  constructor(private elementRef:ElementRef) { }
 
-  ngOnInit() {
+  ngAfterViewInit(){
+    this.swiper = new Swiper(this.elementRef.nativeElement.querySelector('.swiper-container'),{
+      direction: 'horizontal',
+      slidesPerView: 2
+    });
   }
-
 }

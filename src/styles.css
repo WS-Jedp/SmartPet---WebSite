@@ -218,7 +218,7 @@ footer li{
   box-sizing: border-box;
 }
 .card-md:hover{
-  box-shadow: 0 0 30px 2px #a176f4;
+  box-shadow: 0 0 10px 1px #a176f4;
 }
 
 .card-sm{
@@ -235,7 +235,7 @@ footer li{
   text-align: center;
 }
 .card-sm:hover{
-  box-shadow: 0 0 30px 2px #5c92ff;
+  box-shadow: 0 0 15px 1px #5c92ff;
 }
 
 .card-price{

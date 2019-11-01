@@ -120,12 +120,16 @@ text-align: center;
 }
 
 .slider{
-  border: 1px solid white;
   width: 200%;
   height: 100;
   position: relative;
   flex-wrap: nowrap;
 }
+.swiper-container{
+  width: 200% !important;
+  height: 100%;
+}
+
 
 .formData{
   width: 100%;
@@ -135,6 +139,15 @@ text-align: center;
 
 .list{
   min-height: 100vh;
+  position: relative;
+}
+
+.list form{
+  width: 100%;
+}
+
+.list input[type="text"]{
+  min-width: 95%;
 }
 
 .blogInfo{
@@ -160,7 +173,7 @@ text-align: center;
   z-index: 5;
   display: flex;
   justify-content: center;
-  align-items: ce
+  align-items: center;
 }
 
 .blogImg img{

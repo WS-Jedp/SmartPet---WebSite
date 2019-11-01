@@ -12,13 +12,15 @@ import {AppRoutingModule} from '../app-routing.module';
 import { LandingPageComponent } from './Landing/landing-page/landing-page.component';
 import { AtomicDesignComponent } from './AtomicDesign/atomic-design/atomic-design.component';
 import { FooterLandingPageComponent } from './Landing/footer-landing-page/footer-landing-page.component';
+import { LightboxComponent } from './Components/lightbox/lightbox.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     AtomicDesignComponent,
-    FooterLandingPageComponent
+    FooterLandingPageComponent,
+    LightboxComponent
   ],
   imports: [
     BrowserModule,

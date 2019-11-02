@@ -1,5 +1,5 @@
 
-  <div class="d-flex flex-column justify-content-center align-items-center col-12 card-lg">
+  <div class="d-flex flex-column justify-content-center align-items-center col-12 card-lg" (click)="pressCard()">
     <h3>{{title}}</h3>
 
       <img src="../../../assets/Illustrations/{{img}}" alt="Servicio Personal" width="75%">
@@ -8,5 +8,9 @@
       {{text}}
     </p>
 
-    <app-button title="See More" color="mainPurple"></app-button>
+    <app-button
+      title="See More"
+      color="mainPurple"
+      (click)="pressCard()">
+    </app-button>
   </div>

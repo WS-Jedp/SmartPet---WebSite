@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-card-large',
@@ -11,9 +11,24 @@ export class CardLargeComponent implements OnInit {
   @Input() img:string = 'ServicioPersonal.png';
   @Input() text:string = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, vel, reiciendis. Quas voluptatibus in, ea saepe quo?.';
 
+  @Input() fullTextCard:string = 'some';
+  @Output() actionCard:EventEmitter<object> = new EventEmitter();
+
+  dataCardBox:object;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  // Functions
+  pressCard(){
+    this.dataCardBox = {
+      title: this.title,
+      text: this.fullTextCard,
+      img: this.img,
+    }
+    this.actionCard.emit(this.dataCardBox);
   }
 
 }

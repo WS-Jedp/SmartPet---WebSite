@@ -26,12 +26,42 @@ export class LandingPageComponent implements AfterViewInit {
   }
 
 
-// LightBox
+// ----------- LightBox -------------
+// Button
 showLightbox(event:object){
   this.dataLightbox = event;
   this.lightBox = true;
 }
 
+
+// LightBox for Cards
+  // CardLg
+showLightboxCardLg(data:object){
+  this.dataLightbox = data;
+  this.lightBox = true;
+}
+
+  // Card Sm
+showLightboxCardSm(data:object){
+  this.dataLightbox = data;
+  this.lightBox = true;
+}
+
+ // Card Price
+showLightboxCardPrice(data){
+    this.dataLightbox = data;
+    this.lightBox = true;
+    console.log(data)
+}
+
+
+  // Card Slider
+showLightboxCardSlider(data){
+  this.dataLightbox = data;
+  this.lightBox = true;
+}
+
+// ----------- Close lightbox
 closeBox(event){
   if(event){
     this.lightBox = false;

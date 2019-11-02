@@ -19,6 +19,7 @@ import { CardPriceComponent } from './Components/Cards/card-price/card-price.com
 import { CardSliderComponent } from './Components/Cards/card-slider/card-slider.component';
 import { ButtonComponent } from './Components/Buttons/button/button.component';
 import { ThanksPageComponent } from './Landing/thanks-page/thanks-page.component';
+import { LoginPageComponent } from './Landing/login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ThanksPageComponent } from './Landing/thanks-page/thanks-page.component
     CardPriceComponent,
     CardSliderComponent,
     ButtonComponent,
-    ThanksPageComponent
+    ThanksPageComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

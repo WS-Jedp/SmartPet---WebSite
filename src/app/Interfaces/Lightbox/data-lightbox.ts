@@ -3,4 +3,6 @@ export interface DataLightbox {
   title?:string;
   text?:string;
   img?:string;
+  subscription?:string;
+  contact?:boolean;
 }

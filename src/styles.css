@@ -342,6 +342,27 @@ input[type="text"]:focus{
 }
 .form-login input[type="text"]:hover{
   box-shadow: 0 0 0 0 gray;
+  font-size: 1rem;
+}
+
+.form-login input[type="password"]{
+  background-color: rgba(0, 0, 0, 0.0);
+  border: 0 !important;
+  border-radius: 0 !important;
+  border-bottom: 0 !important;
+  height: none;
+  font-weight: lighter;
+  box-shadow: 0 0 0px 0px #a176f4;
+  transition: 0.2s ease-out;
+  color: white !important;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #333333;
+  width: 100%
+}
+.form-login input[type="password"]:hover{
+  box-shadow: 0 0 0 0 gray;
+  font-size: 1rem;
 }
 
 .input-login{
@@ -357,6 +378,10 @@ input[type="text"]:focus{
 }
 
 .form-login input[type="text"]:focus~.input-login{
+  box-shadow: 0 0 8px 1px #5c92ff;
+}
+
+.form-login input[type="password"]:focus~.input-login{
   box-shadow: 0 0 8px 1px #5c92ff;
 }
 

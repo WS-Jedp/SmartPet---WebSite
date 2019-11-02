@@ -1,4 +1,4 @@
-
+<app-login-page></app-login-page>
 
 <ng-template #box>
   <app-lightbox (closeBox)="closeBox($event)" [data]="dataLightbox"></app-lightbox>
@@ -18,8 +18,20 @@
           </p>
 
           <div class="d-flex flex-row justify-content-around align-items-center btnsIntroduction">
-            <app-button title="See More" color="secondBlue" class="mr-1"></app-button>
-            <app-button title="Get SmartPet" color="mainBlue" [isForm]="true" titleBox="Hola" textBox="Chaos" imgBox="SmartWork.png" (action)='showLightbox($event)'></app-button>
+            <app-button
+              title="See More"
+              color="secondBlue"
+              class="mr-1">
+            </app-button>
+
+            <app-button
+              title="Get SmartPet"
+              color="mainBlue"
+              [isForm]="true"
+              titleBox="Hola"
+              textBox="Chaos"
+              imgBox="SmartWork.png" (action)='showLightbox($event)'>
+            </app-button>
           </div>
       </div>
 
@@ -50,15 +62,34 @@
       <section class="d-flex flex-column flex-md-row justify-content-center align-items-center m-0 p-4 servicesCards col-12 col-md-6 row">
 
         <div class="col-12 row cardLg">
-          <app-card-large title="Servicion Personal" img="ServicioPersonal.png" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui perferendis nam dolor it name our"></app-card-large>
+          <app-card-large
+            title="Servicion Personal"
+            img="ServicioPersonal.png"
+            text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui perferendis nam dolor it name our"
+            fullTextCard="Texto Full"
+            (actionCard)="showLightboxCardLg($event)">
+          </app-card-large>
         </div>
 
           <div class="col-12 row cardsSm">
             <div class="col-12 m-0 p-0">
-              <app-card-small title="Cuidado " img="AtencionUnica.png"></app-card-small>
+
+              <app-card-small
+                title="Cuidado"
+                img="AtencionUnica.png"
+                fullText="Full text of Cuidado"
+                (actionCardSm)="showLightboxCardSm($event)">
+              </app-card-small>
+
             </div>
+
             <div class="col-12 m-0 p-0">
-                <app-card-small title="Seguridad Total" img="SeguridadSiempre.png"></app-card-small>
+                <app-card-small
+                title="Seguridad Total"
+                img="SeguridadSiempre.png"
+                fullText="Full text of seguridad"
+                (actionCardSm)="showLightboxCardSm($event)">
+                </app-card-small>
             </div>
 
 
@@ -79,7 +110,15 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dicta similique, maiores ex impedit assumenda molestiae iusto dignissimos et nihil.
         </p>
 
-          <app-button title="Get Started" color="mainBlue" [isForm]="false" titleBox="FORMULARIO REGISTRO" textBox="Unete a la mejor app de mascotas!" imgBox="ServicioEstudiantil.png" (action)="showLightbox($event)" ></app-button>
+          <app-button
+            title="Get Started"
+            color="mainBlue"
+            [isForm]="false"
+            titleBox="FORMULARIO REGISTRO"
+            textBox="Unete a la mejor app de mascotas!"
+            imgBox="ServicioEstudiantil.png"
+            (action)="showLightbox($event)">
+          </app-button>
 
       </article>
   </article>
@@ -96,19 +135,39 @@
   <section class="d-flex flex-row justify-content-around p-0 m-0 col-12 container row cardsPrices">
 
       <div class="col-12 col-sm-6 col-md-3 my-2 p-2">
-        <app-card-price title="Standard Plan" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere rerum odit ratione consectetur, eveniet!"></app-card-price>
+        <app-card-price
+          title="Standard Plan"
+          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere rerum odit ratione consectetur, eveniet!"
+          fullText="Full text form"
+          (actionCardPrice)="showLightboxCardPrice($event)">
+        </app-card-price>
       </div>
 
       <div class="col-12 col-sm-6 col-md-3 my-2 p-2">
-        <app-card-price title="Bronze Plan" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere rerum odit ratione consectetur, eveniet!"></app-card-price>
+        <app-card-price
+          title="Bronze Plan"
+          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere rerum odit ratione consectetur, eveniet!"
+          fullText="Full text Form Bronze"
+          (actionCardPrice)="showLightboxCardPrice($event)">
+        </app-card-price>
       </div>
 
       <div class="col-12 col-sm-6 col-md-3 my-2 p-2">
-        <app-card-price title="Silver Plan" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere rerum odit ratione consectetur, eveniet!"></app-card-price>
+        <app-card-price
+          title="Silver Plan"
+          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere rerum odit ratione consectetur, eveniet!"
+          fullText="Full text Form Silver"
+          (actionCardPrice)="showLightboxCardPrice($event)">
+        </app-card-price>
       </div>
 
       <div class="col-12 col-sm-6 col-md-3 my-2 p-2">
-        <app-card-price title="Gold Plan" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere rerum odit ratione consectetur, eveniet!"></app-card-price>
+        <app-card-price
+        title="Gold Plan"
+        text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere rerum odit ratione consectetur, eveniet!"
+        fullText="Full text Form Gold"
+        (actionCardPrice)="showLightboxCardPrice($event)">
+        </app-card-price>
       </div>
 
   </section>
@@ -136,19 +195,40 @@
 
 
         <div class="col-3 mr-1 swiper-slide">
-          <app-card-slider></app-card-slider>
+          <app-card-slider
+            title="¿Quienes Somos?"
+            text="Full text of who we are"
+            img="AtencionUnica.png"
+            (actionCardSlider)="showLightboxCardSlider($event)">
+          </app-card-slider>
         </div>
 
         <div class="col-3 mr-1 swiper-slide">
-          <app-card-slider></app-card-slider>
+          <app-card-slider
+            title="¿Que Hacemos?"
+            text="Full text of what we do"
+            img="SmartCity.png"
+            (actionCardSlider)="showLightboxCardSlider($event)">
+          </app-card-slider>
         </div>
 
         <div class="col-3 mr-1 swiper-slide">
-          <app-card-slider></app-card-slider>
+          <app-card-slider
+            title="Filosofia"
+            text="Full text of our philosophy"
+            img="ServicioEstudiantil.png"
+            (actionCardSlider)="showLightboxCardSlider($event)">
+          </app-card-slider>
         </div>
 
         <div class="col-3 mr-1 swiper-slide">
-          <app-card-slider></app-card-slider>
+          <app-card-slider
+            title="Contactanos"
+            text="Full text of our contact"
+            img="SmartBlog.png"
+            [contact]="true"
+            (actionCardSlider)="showLightboxCardSlider($event)">
+          </app-card-slider>
         </div>
 
       </div>

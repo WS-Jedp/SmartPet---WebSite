@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
+// Interfaces
+import {DataLightbox} from '../../Interfaces/Lightbox/data-lightbox';
 
 @Component({
   selector: 'app-lightbox',
@@ -7,14 +10,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LightboxComponent implements OnInit {
 
-  dataType:boolean = null;
+  @Input() data:DataLightbox;
+  @Output() closeBox:EventEmitter<boolean> = new EventEmitter();
+
+  isForm:boolean;
+
   title:string;
   text:string;
   img:string;
 
-  constructor() { }
+  constructor() {
 
-  ngOnInit() {
   }
 
+  ngOnInit() {
+    this.isForm = this.data.form;
+    console.log(this.isForm)
+
+    this.title = this.data.title;
+    this.text = this.data.text;
+    this.img = this.data.img;
+  }
+
+
+  // Functions
+  closeLightbox(){
+    this.closeBox.emit(true)
+  }
 }

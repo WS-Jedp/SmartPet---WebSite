@@ -13,6 +13,12 @@ import { LandingPageComponent } from './Landing/landing-page/landing-page.compon
 import { AtomicDesignComponent } from './AtomicDesign/atomic-design/atomic-design.component';
 import { FooterLandingPageComponent } from './Landing/footer-landing-page/footer-landing-page.component';
 import { LightboxComponent } from './Components/lightbox/lightbox.component';
+import { CardLargeComponent } from './Components/Cards/card-large/card-large.component';
+import { CardSmallComponent } from './Components/Cards/card-small/card-small.component';
+import { CardPriceComponent } from './Components/Cards/card-price/card-price.component';
+import { CardSliderComponent } from './Components/Cards/card-slider/card-slider.component';
+import { ButtonComponent } from './Components/Buttons/button/button.component';
+import { ThanksPageComponent } from './Landing/thanks-page/thanks-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +26,13 @@ import { LightboxComponent } from './Components/lightbox/lightbox.component';
     LandingPageComponent,
     AtomicDesignComponent,
     FooterLandingPageComponent,
-    LightboxComponent
+    LightboxComponent,
+    CardLargeComponent,
+    CardSmallComponent,
+    CardPriceComponent,
+    CardSliderComponent,
+    ButtonComponent,
+    ThanksPageComponent
   ],
   imports: [
     BrowserModule,

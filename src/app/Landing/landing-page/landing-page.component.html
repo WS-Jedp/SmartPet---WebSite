@@ -1,7 +1,12 @@
 
 
-<section class="d-flex flex-column container-fluid row m-0 p-0 bg-gradientViolet welcomeSect">
+<ng-template #box>
+  <app-lightbox (closeBox)="closeBox($event)" [data]="dataLightbox"></app-lightbox>
+</ng-template>
 
+<section class="d-flex flex-column container-fluid row m-0 p-0 bg-gradientViolet welcomeSect" *ngIf="!lightBox else box">
+
+<!-- --------- Section 1 -------------- -->
   <article class="d-flex flex-row justify-content-center align-items-center col-12 row introduction m-0 p-0 mb-5">
       <div class="col-12 col-md-6 mb-5 d-flex flex-column justify-content-center align-items-start">
           <h1>
@@ -12,9 +17,9 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
 
-          <div class="d-flex flex-row btnsIntroduction">
-            <button class="btnSmart btn-secondBlue">See More</button>
-            <button class="btnSmart btn-mainBlue">Get Started</button>
+          <div class="d-flex flex-row justify-content-around align-items-center btnsIntroduction">
+            <app-button title="See More" color="secondBlue" class="mr-1"></app-button>
+            <app-button title="Get SmartPet" color="mainBlue" [isForm]="true" titleBox="Hola" textBox="Chaos" imgBox="SmartWork.png" (action)='showLightbox($event)'></app-button>
           </div>
       </div>
 
@@ -39,38 +44,30 @@
       </a>
   </article>
 
-<!-- Second Section -->
+<!--  -------------- Second Section ------------ -->
   <article class="container-fluid d-flex flex-row justify-content-center align-items-center col-12 m-0 p-0 mt-5 mb-5 row services">
 
       <section class="d-flex flex-column flex-md-row justify-content-center align-items-center m-0 p-4 servicesCards col-12 col-md-6 row">
+
         <div class="col-12 row cardLg">
-          <div class="d-flex flex-column justify-content-center align-items-center col-12 card-lg">
-            <h3>Servicio Personalizado</h3>
-
-              <img src="../../../assets/Illustrations/ServicioPersonal.png" alt="Servicio Personal" width="75%">
-
-            <p class="text-black aling-items-center">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, vel, reiciendis. Quas voluptatibus in, ea saepe quo?.
-            </p>
-
-            <button type="button" name="button" class="btnSmart btn-mainPurple">See More</button>
-          </div>
+          <app-card-large title="Servicion Personal" img="ServicioPersonal.png" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui perferendis nam dolor it name our"></app-card-large>
         </div>
 
           <div class="col-12 row cardsSm">
-            <div class="d-flex flex-column align-items-center justify-content-around col-12 card-sm">
-              <h3>Cuidad Especial</h3>
-              <img src="../../../assets/Illustrations/AtencionUnica.png" alt="Atencion Unica" width="70%">
+            <div class="col-12 m-0 p-0">
+              <app-card-small title="Cuidado " img="AtencionUnica.png"></app-card-small>
             </div>
-            <div class="d-flex flex-column align-items-center justify-content-around col-12 card-sm">
-              <h3>Seguridad Primero</h3>
-              <img src="../../../assets/Illustrations/SeguridadSiempre.png" alt="Seguridad Siempre" width="70%">
+            <div class="col-12 m-0 p-0">
+                <app-card-small title="Seguridad Total" img="SeguridadSiempre.png"></app-card-small>
             </div>
+
+
           </div>
 
           <div class="starHorizon2">
             <div class="starCircle"></div>
           </div>
+
       </section>
 
       <article class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center m-0 p-4">
@@ -82,9 +79,7 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dicta similique, maiores ex impedit assumenda molestiae iusto dignissimos et nihil.
         </p>
 
-          <button class="btnSmart btn-mainBlue mt-2">
-              Call To Action
-          </button>
+          <app-button title="Get Started" color="mainBlue" [isForm]="false" titleBox="FORMULARIO REGISTRO" textBox="Unete a la mejor app de mascotas!" imgBox="ServicioEstudiantil.png" (action)="showLightbox($event)" ></app-button>
 
       </article>
   </article>
@@ -101,49 +96,20 @@
   <section class="d-flex flex-row justify-content-around p-0 m-0 col-12 container row cardsPrices">
 
       <div class="col-12 col-sm-6 col-md-3 my-2 p-2">
-        <div class="card-md">
-          <figure class="circlePrice">
-            <img src="" alt="">
-          </figure>
-          <h3>Titulo h3</h3>
-          <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil fuga, accusamus cumque incidunt doloribus possimus.</p>
-          <button type="button" name="button" class="btnSmart btn-secondGreen">Buy</button>
-        </div>
+        <app-card-price title="Standard Plan" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere rerum odit ratione consectetur, eveniet!"></app-card-price>
       </div>
 
       <div class="col-12 col-sm-6 col-md-3 my-2 p-2">
-        <div class="card-md">
-          <figure class="circlePrice">
-            foto
-          </figure>
-          <h3>Titulo h3</h3>
-          <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil fuga, accusamus cumque incidunt doloribus possimus.</p>
-          <button type="button" name="button" class="btnSmart btn-secondGreen">Buy</button>
-        </div>
+        <app-card-price title="Bronze Plan" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere rerum odit ratione consectetur, eveniet!"></app-card-price>
       </div>
 
       <div class="col-12 col-sm-6 col-md-3 my-2 p-2">
-        <div class="card-md">
-          <figure class="circlePrice">
-            foto
-          </figure>
-          <h3>Titulo h3</h3>
-          <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil fuga, accusamus cumque incidunt doloribus possimus.</p>
-          <button type="button" name="button" class="btnSmart btn-secondGreen">Buy</button>
-        </div>
+        <app-card-price title="Silver Plan" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere rerum odit ratione consectetur, eveniet!"></app-card-price>
       </div>
 
       <div class="col-12 col-sm-6 col-md-3 my-2 p-2">
-        <div class="card-md">
-          <figure class="circlePrice">
-            foto
-          </figure>
-          <h3>Titulo h3</h3>
-          <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil fuga, accusamus cumque incidunt doloribus possimus.</p>
-          <button type="button" name="button" class="btnSmart btn-secondGreen">Buy</button>
-        </div>
+        <app-card-price title="Gold Plan" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere rerum odit ratione consectetur, eveniet!"></app-card-price>
       </div>
-
 
   </section>
 </article>
@@ -169,20 +135,20 @@
         <div class="swiper-wrapper">
 
 
-        <div class="col-3 mr-1 card-price swiper-slide">
-          Hola
+        <div class="col-3 mr-1 swiper-slide">
+          <app-card-slider></app-card-slider>
         </div>
 
-        <div class="col-3 mr-1 card-price swiper-slide">
-          Hola
+        <div class="col-3 mr-1 swiper-slide">
+          <app-card-slider></app-card-slider>
         </div>
 
-        <div class="col-3 mr-1 card-price swiper-slide">
-          Hola
+        <div class="col-3 mr-1 swiper-slide">
+          <app-card-slider></app-card-slider>
         </div>
 
-        <div class="col-3 mr-1 card-price swiper-slide">
-          Hola
+        <div class="col-3 mr-1 swiper-slide">
+          <app-card-slider></app-card-slider>
         </div>
 
       </div>
@@ -235,8 +201,4 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos distinctio assumenda quaerat, reprehenderit ipsam molestias voluptates repudiandae numquam, iure ut!</p>
       </section>
   </article>
-
-
-
-
 </section>

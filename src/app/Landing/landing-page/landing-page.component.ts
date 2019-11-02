@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ElementRef, AfterViewInit } from '@angular/core';
 declare var Swiper: any;
 
 @Component({
@@ -8,7 +8,15 @@ declare var Swiper: any;
 })
 export class LandingPageComponent implements AfterViewInit {
 
-  constructor(private elementRef:ElementRef) { }
+  swiper:any;
+
+  // Show Lightbox
+  lightBox:boolean;
+  dataLightbox:any;
+
+  constructor(private elementRef:ElementRef) {
+    this.lightBox = false;
+  }
 
   ngAfterViewInit(){
     this.swiper = new Swiper(this.elementRef.nativeElement.querySelector('.swiper-container'),{
@@ -16,4 +24,19 @@ export class LandingPageComponent implements AfterViewInit {
       slidesPerView: 2
     });
   }
+
+
+// LightBox
+showLightbox(event:object){
+  this.dataLightbox = event;
+  this.lightBox = true;
+}
+
+closeBox(event){
+  if(event){
+    this.lightBox = false;
+  }else{
+    this.lightBox = true;
+  }
+}
 }

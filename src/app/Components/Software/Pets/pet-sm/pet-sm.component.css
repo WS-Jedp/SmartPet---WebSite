@@ -1,0 +1,45 @@
+.imgPet{
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 1px solid #a176f4;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  box-shadow: 0 0 8px 1px #a176f4;
+  z-index: 5;
+}
+
+.imgPet img{
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* States */
+.petReady{
+  border: 1px solid #99ff66;
+  box-shadow: 0 0 8px 1px #99ff66;
+}
+.ready{
+  color: #99ff66;
+}
+
+.petAttending{
+  border: 1px solid orange;
+  box-shadow: 0 0 8px 1px orange;
+}
+.attending{
+  color: orange;
+}
+
+.petAlert{
+  border: 1px solid red;
+  box-shadow: 0 0 8px 1px red;
+}
+.alert{
+  color: red;
+}

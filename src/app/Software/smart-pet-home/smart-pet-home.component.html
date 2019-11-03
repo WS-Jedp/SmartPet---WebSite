@@ -1,0 +1,52 @@
+<section class="container-fluid row d-flex flex-row justify-content-start align-items-center m-0 p-0 containerSoftware">
+
+  <menu class="col-12 col-md-3 d-flex flex-column align-items-center justify-content-around bg-gradientViolet p-5 pb-2">
+
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <figure class="imgUser">
+        <img src="" alt="Imagen Usuario">
+      </figure>
+
+      <h4>Usuario</h4>
+      <h5>Tipo de cliente</h5>
+    </div>
+
+    <hr>
+
+    <nav class="d-flex flex-column align-self-start row">
+      <ul class="d-flex flex-column align-items-start row col-12">
+        <li class="col-12 menuBtns">
+          <a routerLink="/Home">Inicio</a>
+          <div class="navDecoration"></div>
+        </li>
+        <li class="col-12 menuBtns">
+          Citas
+          <div class="navDecoration"></div>
+        </li>
+        <li class="col-12 menuBtns">
+          <a routerLink="/Home/Pets">Mascotas</a>
+          <div class="navDecoration"></div>
+        </li>
+        <li class="col-12 menuBtns">
+          Calendario
+          <div class="navDecoration"></div>
+        </li>
+        <li class="col-12 menuBtns">
+          Perfil
+          <div class="navDecoration"></div>
+        </li>
+      </ul>
+    </nav>
+
+    <button type="button" class="btnSmart btn-secondPurple align-self-start" routerLink="/welcome">Salir</button>
+  </menu>
+
+<!-- ------------- Router outler -------------- -->
+  <article class="col-12 col-md-9 d-flex justify-content-start align-items-start m-0 p-0 row softwareActions">
+
+    <router-outlet></router-outlet>
+
+  </article>
+
+
+</section>

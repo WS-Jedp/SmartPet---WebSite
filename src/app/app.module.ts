@@ -21,6 +21,10 @@ import { ButtonComponent } from './Components/Buttons/button/button.component';
 import { ThanksPageComponent } from './Landing/thanks-page/thanks-page.component';
 import { LoginPageComponent } from './Landing/login-page/login-page.component';
 import { MenuComponent } from './Landing/menu/menu.component';
+import { SmartPetHomeComponent } from './Software/smart-pet-home/smart-pet-home.component';
+import { SmartPetStartComponent } from './Software/smart-pet-start/smart-pet-start.component';
+import { SmartPetPetsComponent } from './Software/smart-pet-pets/smart-pet-pets.component';
+import { PetSmComponent } from './Components/Software/Pets/pet-sm/pet-sm.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { MenuComponent } from './Landing/menu/menu.component';
     ButtonComponent,
     ThanksPageComponent,
     LoginPageComponent,
-    MenuComponent
+    MenuComponent,
+    SmartPetHomeComponent,
+    SmartPetStartComponent,
+    SmartPetPetsComponent,
+    PetSmComponent
   ],
   imports: [
     BrowserModule,

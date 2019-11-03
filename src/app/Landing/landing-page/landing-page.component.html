@@ -1,4 +1,6 @@
-<app-login-page></app-login-page>
+<ng-template #menu>
+  <app-menu (closeMenu)="hideMenu($event)"></app-menu>
+</ng-template>
 
 <ng-template #box>
   <app-lightbox (closeBox)="closeBox($event)" [data]="dataLightbox"></app-lightbox>
@@ -6,9 +8,26 @@
 
 <section class="d-flex flex-column container-fluid row m-0 p-0 bg-gradientViolet welcomeSect" *ngIf="!lightBox else box">
 
+<!-- --------- Nav ---------- -->
+<nav class="col-12 d-flex row justify-content-between align-items-center m-0 p-4" *ngIf="!showMenu else menu">
+  <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start">
+    SmartPet
+  </div>
+
+  <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+  <button type="button" name="button" class="btnSmart btn-secondBlue" (click)="menuShow()">
+    MENU
+  </button>
+  </div>
+</nav>
+
 <!-- --------- Section 1 -------------- -->
   <article class="d-flex flex-row justify-content-center align-items-center col-12 row introduction m-0 p-0 mb-5">
       <div class="col-12 col-md-6 mb-5 d-flex flex-column justify-content-center align-items-start">
+        <figure class="logoSmartPet">
+          <img src="../../../assets/Illustrations/Logo3.png" alt="SmartPet" width="20%">
+        </figure>
+
           <h1>
             ¡Bienvenido!
           </h1>

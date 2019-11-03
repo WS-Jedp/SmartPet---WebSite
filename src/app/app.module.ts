@@ -20,6 +20,7 @@ import { CardSliderComponent } from './Components/Cards/card-slider/card-slider.
 import { ButtonComponent } from './Components/Buttons/button/button.component';
 import { ThanksPageComponent } from './Landing/thanks-page/thanks-page.component';
 import { LoginPageComponent } from './Landing/login-page/login-page.component';
+import { MenuComponent } from './Landing/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LoginPageComponent } from './Landing/login-page/login-page.component';
     CardSliderComponent,
     ButtonComponent,
     ThanksPageComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

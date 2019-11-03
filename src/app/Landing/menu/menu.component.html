@@ -1,35 +1,27 @@
-<section class="container-fluid m-0 p-0 bg-gradientPurple row d-flex flex-column justify-content-around align-items-center loginSect">
-
-<article class="row col-12 d-flex justify-content-center mb-5 align-items-center flex-column">
-
-  <div class="d-flex justify-content-center align-items-center m-0 p-0 mb-4 imgLogin">
-    <figure  class="d-flex justify-content-center align-items-center m-0 p-0">
-      <img src="../../assets/Illustrations/Logo3.png" alt="SmartPet logo">
-    </figure>
+<section class="d-flex flex-column m-0 p-0 container-fluid row justify-content-between align-items-center p-4 menuSect">
+  <div class="d-flex justify-content-center align-items-center flex-column col-12">
+    <h1>MENU</h1>
+    <hr>
   </div>
 
-  <form action="index.html" method="post" class="col-8 col-md-6 d-flex flex-column justify-content-center align-items-center">
+  <article class="col-12">
+    <menu class="d-flex flex-column justify-content-center align-items-center text-center">
+      <ul>
+        <li><a >Servicios</a></li>
+        <li><a href="#">Planes</a></li>
+        <li><a href="#">¿Quienes Somos?</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a routerLink="/Login" routerLinkActive="active">Iniciar Sesión</a></li>
+      </ul>
+    </menu>
+  </article>
 
-    <div class="form-login col-8 col-md-6 m-2">
-      <input type="text" placeholder="Ingresa tu usario" id="inputText">
-      <div class="input-login"></div>
+  <div class="col-12 row d-flex flex-row justify-content-between align-items-center">
+    <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start">
+      <p>SmartPet - 2019</p>
     </div>
 
-    <div class="form-login col-8 col-md-6 p-3 mb-3">
-      <input type="password" placeholder="Ingresa tu contraseña" id="inputText">
-      <div class="input-login"></div>
-    </div>
-
-    <div class="d-flex m-0 p-0 flex-row col-8 justify-content-around align-items-center row p-3 mb-3 flex-row  btnsLogin">
-      <button type="submit" name="button" class="btnSmart btn-mainPurple">Iniciar Sesión</button>
-      <button name="button" class="btnSmart btn-secondPurple" routerLink="/Welcome">Regresar</button>
-    </div>
-  </form>
-</article>
-
-
-  <article class="d-flex flex-row container-fluid mt-2 p-2 justify-content-end align-items-end col-12 row footerLogin">
-    <div class="col-md-6 d-flex flex-row justify-content-center justify-content-md-start align-items-end">
+    <div class="col-12 col-md-4 d-flex flex-row justify-content-center">
       <ul class="d-flex flex-row">
         <li>
           <a href="#">
@@ -62,9 +54,8 @@
       </ul>
     </div>
 
-    <div class="col-md-6 d-flex flex-row justify-content-center justify-content-md-end align-items-end">
-      <p>SmartPet - 2019</p>
+    <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end outMenu">
+      <button class="btnSmart btn-secondBlue" (click)="close()">Regresar</button>
     </div>
-  </article>
-
+  </div>
 </section>

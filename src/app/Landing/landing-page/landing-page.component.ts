@@ -14,8 +14,12 @@ export class LandingPageComponent implements AfterViewInit {
   lightBox:boolean;
   dataLightbox:any;
 
+  // Menu
+  showMenu:boolean;
+
   constructor(private elementRef:ElementRef) {
     this.lightBox = false;
+    this.showMenu = false;
   }
 
   ngAfterViewInit(){
@@ -32,29 +36,23 @@ showLightbox(event:object){
   this.dataLightbox = event;
   this.lightBox = true;
 }
-
-
 // LightBox for Cards
   // CardLg
 showLightboxCardLg(data:object){
   this.dataLightbox = data;
   this.lightBox = true;
 }
-
   // Card Sm
 showLightboxCardSm(data:object){
   this.dataLightbox = data;
   this.lightBox = true;
 }
-
  // Card Price
 showLightboxCardPrice(data){
     this.dataLightbox = data;
     this.lightBox = true;
     console.log(data)
 }
-
-
   // Card Slider
 showLightboxCardSlider(data){
   this.dataLightbox = data;
@@ -67,6 +65,20 @@ closeBox(event){
     this.lightBox = false;
   }else{
     this.lightBox = true;
+  }
+}
+
+// ---------- Menu
+
+menuShow(){
+  this.showMenu = true;
+}
+
+hideMenu(event){
+  if(event){
+    this.showMenu = false;
+  }else{
+    this.showMenu = event;
   }
 }
 }

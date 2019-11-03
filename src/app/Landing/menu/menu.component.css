@@ -1,0 +1,58 @@
+.menuSect{
+  min-height: 100vh;
+  background-color: rgba(51,51,51,0.9);
+  position: fixed;
+  z-index: 50;
+}
+
+.mediaSocial{
+  fill: white !important;
+}
+
+menu li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+menu a{
+  text-decoration: none;
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
+menu li:after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  align-self: center;
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+menu li:hover a{
+  color:  #a176f4;
+  font-size: 2rem;
+}
+
+menu li:hover:after{
+  width: 100%;
+  height: 2px;
+  background-image: -moz-linear-gradient( 1deg, rgb(106,130,222) 0%, rgb(135,117,217) 100%);
+  background-image: -webkit-linear-gradient( 1deg, rgb(106,130,222) 0%, rgb(135,117,217) 100%);
+}
+
+.outMenu a{
+  color: white;
+  text-decoration: none;
+}
+
+.outMenu a:hover{
+  color: #a176f4;
+  text-decoration: none;
+}

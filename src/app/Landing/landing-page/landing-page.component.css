@@ -3,6 +3,10 @@
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98%);
 }
 
+nav{
+  height: 10vh;
+}
+
 .introduction{
   min-height: 100vh;
   position: relative;

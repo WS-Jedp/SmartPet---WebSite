@@ -1,0 +1,25 @@
+.dateSmCard{
+  border: 1px solid #a176f4;
+  border-radius: 15px;
+  color: #333333;
+  min-width: 100%;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+.dateSmCard:hover{
+  box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.3);
+}
+
+.dataDate{
+  color: black;
+}
+
+.dateSmCard hr {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.navDecoration{
+  background-color: #333333;
+}

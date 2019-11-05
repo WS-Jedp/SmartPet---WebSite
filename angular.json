@@ -29,8 +29,9 @@
               "node_modules/swiper/css/swiper.min.css"
             ],
             "scripts": [
+              "node_modules/swiper/js/swiper.min.js",
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/swiper/js/swiper.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           },
           "configurations": {

@@ -1,0 +1,12 @@
+.sectStart{
+  position: absolute;
+  min-height: 100vh;
+}
+
+.dates{
+  min-height: 50vh;
+}
+
+.pets{
+  min-height: 50vh;
+}

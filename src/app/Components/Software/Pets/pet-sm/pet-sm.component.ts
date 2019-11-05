@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pet-sm',
@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pet-sm.component.css']
 })
 export class PetSmComponent implements OnInit {
-  constructor() { }
+
+  @Input() homeView:boolean;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

@@ -25,6 +25,8 @@ import { SmartPetHomeComponent } from './Software/smart-pet-home/smart-pet-home.
 import { SmartPetStartComponent } from './Software/smart-pet-start/smart-pet-start.component';
 import { SmartPetPetsComponent } from './Software/smart-pet-pets/smart-pet-pets.component';
 import { PetSmComponent } from './Components/Software/Pets/pet-sm/pet-sm.component';
+import { DateSmCardComponent } from './Components/Software/Dates/date-sm-card/date-sm-card.component';
+import { SmartPetProfileComponent } from './Software/smart-pet-profile/smart-pet-profile.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { PetSmComponent } from './Components/Software/Pets/pet-sm/pet-sm.compone
     SmartPetHomeComponent,
     SmartPetStartComponent,
     SmartPetPetsComponent,
-    PetSmComponent
+    PetSmComponent,
+    DateSmCardComponent,
+    SmartPetProfileComponent
   ],
   imports: [
     BrowserModule,

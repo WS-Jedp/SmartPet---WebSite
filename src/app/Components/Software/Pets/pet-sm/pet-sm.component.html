@@ -1,7 +1,45 @@
-<article class="d-flex flex-column justify-content-center align-items-center m-0 p-0 col-12 row">
-  <figure class="imgPet">
-    <img src="../../../../../assets/Imgs/Pets/myPet.jpg" alt="My pet">
-  </figure>
-  <h3 class="">Nombre de mascota</h3>
-  <h5>Estado</h5>
+<article class="d-flex flex-column justify-content-center align-items-center m-0 p-0 col-12 row petCard dropright">
+
+    <figure class="imgPet">
+      <img src="../../../../../assets/Imgs/Pets/myPet.jpg" alt="My pet">
+    </figure>
+    <h3 class="">Nombre de mascota</h3>
+    <h5>Estado</h5>
+
+    <div class="d-flex col-12 flex-row justify-content-around align-items-center m-0 p-0 row" *ngIf="!homeView">
+      <div class="col-5 m-0 p-0">
+        <app-button title="See Pet" color="mainPurple"></app-button>
+      </div>
+      <div class="col-5 m-0 p-0">
+        <app-button title="See Historial" color="secondPurple"></app-button>
+      </div>
+    </div>
+
+    <div class="col-12 m-0 p-0 align-self-end row" *ngIf="homeView">
+      <button class="btnSmart btn-secondPurple dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+      </button>
+
+        <!-- Dropdown menu items -->
+      <div class="dropdown-menu col-12" aria-labelledby="dropdownMenuButton">
+        <ul>
+          <li class="col-12 menuBtns">
+            <a class="dropdown-item" href="#">Action</a>
+            <div class="navDecoration"></div>
+          </li>
+          <li class="col-12 menuBtns">
+            <a class="dropdown-item" href="#">Action</a>
+            <div class="navDecoration"></div>
+          </li>
+          <li class="col-12 menuBtns">
+            <a class="dropdown-item" href="#">Action</a>
+            <div class="navDecoration"></div>
+          </li>
+          <li class="col-12 menuBtns">
+            <a class="dropdown-item" href="#">Action</a>
+            <div class="navDecoration"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
 </article>

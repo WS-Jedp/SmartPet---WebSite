@@ -1,1 +1,29 @@
-<p class="text-black">smart-pet-start works!</p>
+<section class="col-12 d-flex flex-column m-0 p-4 row justify-content-start align-items-start sectStart">
+
+  <article class="col-12 d-flex flex-column justify-content-start align-items-start row m-0 p-0 dates">
+    <h1>Citas</h1>
+    <hr>
+    <div class="col-12 d-flex flex-row m-0 p-0">
+      <div class="mb-2 mr-2 p-0 col-12 col-md-3 justify-content-center align-items-center row">
+        <app-date-sm-card statePet="ready"></app-date-sm-card>
+      </div>
+      <div class="mb-2 mr-2 p-0 col-12 col-md-3 justify-content-center align-items-center row">
+        <app-date-sm-card></app-date-sm-card>
+      </div>
+      <div class="mb-2 mr-2 p-0 col-12 col-md-3 justify-content-center align-items-center row">
+        <app-date-sm-card></app-date-sm-card>
+      </div>
+    </div>
+  </article>
+
+  <article class="col-12 d-flex flex-column justify-content-start align-items-start row m-0 p-0 pets">
+    <h1>Estado de tus mascotas</h1>
+    <hr>
+    <div class="col-12 d-flex flex-row m-0 p-0 col-4">
+      <div class="mb-2 mr-2 p-0 col-12 col-md-4 justify-content-center align-items-center row">
+        <app-pet-sm homeView="true"></app-pet-sm>
+      </div>
+    </div>
+  </article>
+
+</section>

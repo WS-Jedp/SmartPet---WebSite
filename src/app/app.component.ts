@@ -14,9 +14,7 @@ export class AppComponent {
   landing:boolean;
 
   constructor(private router:Router){
-
     this.landing = true;
-
     router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd)=>{
       console.log('rutas==>', event.url);
 

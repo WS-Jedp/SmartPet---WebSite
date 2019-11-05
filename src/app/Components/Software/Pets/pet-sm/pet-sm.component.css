@@ -1,3 +1,17 @@
+.petCard{
+  border: 1px solid #a176f4;
+  border-radius: 20px;
+  box-shadow: 0 0 3px #a176f4;
+  padding: 0.5rem !important;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+.petCard:hover{
+  box-shadow: 0 0 8px 1px #a176f4;
+}
+
 .imgPet{
   width: 200px;
   height: 200px;
@@ -42,4 +56,8 @@
 }
 .alert{
   color: red;
+}
+
+.navDecoration{
+  background-color: black;
 }

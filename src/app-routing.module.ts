@@ -11,6 +11,7 @@ import {LoginPageComponent} from './app/Landing/login-page/login-page.component'
 import {SmartPetHomeComponent} from './app/Software/smart-pet-home/smart-pet-home.component';
 import {SmartPetStartComponent} from './app/Software/smart-pet-start/smart-pet-start.component';
 import {SmartPetPetsComponent} from './app/Software/smart-pet-pets/smart-pet-pets.component';
+import {SmartPetProfileComponent} from './app/Software/smart-pet-profile/smart-pet-profile.component';
 
 
 const routes:Routes = [
@@ -21,6 +22,7 @@ const routes:Routes = [
   {path: 'Home', component: SmartPetHomeComponent, children:[
     {path: '', component: SmartPetStartComponent},
     {path: 'Pets', component: SmartPetPetsComponent},
+    {path: 'Profile', component: SmartPetProfileComponent},
     {path: '**', component: SmartPetStartComponent}
   ]},
   {path:'', redirectTo: '/Welcome', pathMatch: 'full'},

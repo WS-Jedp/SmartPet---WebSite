@@ -43,29 +43,6 @@ nav a{
   color: white;
 }
 
-.menuBtns{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  position: relative;
-  transition: 0.2s ease-in-out;
-}
-
-.navDecoration{
-  width: 0;
-  height: 2px;
-  border-radius: 25px;
-  background-color: white;
-  transition: 0.5s ease-in-out;
-}
-
-.menuBtns:hover .navDecoration{
-  width: 100%;
-}
-.menuBtns:hover{
-  font-size: 2rem;
-}
 
 .active-link{
   font-size: 2rem;

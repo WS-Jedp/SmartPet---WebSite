@@ -1,5 +1,8 @@
-<section class="container-fluid m-0 p-0 d-flex justify-content-center align-items-center shadow" (click)="closeLightbox()">
+<section class="container-fluid m-0 p-0 d-flex justify-content-center align-items-center shadow">
   <article class="m-0 p-0 lightbox">
+      <div class="closeLg" (click)="closeLightbox()">
+        x
+      </div>
       <h1>{{title}}</h1>
       <hr>
 
@@ -7,6 +10,55 @@
         <p class="text-black">
           {{text}}
         </p>
+        <form id="formRegister"  method="post" class="row container-fluid col-12 m-0 p-0 flex-column justify-content-start align-items-start" (ngSubmit)="registerUser(data)" #data="ngForm" >
+
+          <!-- Names -->
+          <div class="col-12 m-0 p-0 row">
+            <div class="col-6 m-0 p-2">
+                <label for="name">Ingresa tu nombre</label>
+                <input type="text" name="name" placeholder="Ingresa tu nombre" required ngModel>
+            </div>
+            <div class="col-6 m-0 p-2">
+                <label for="last_name">Ingresa tus apellidos</label>
+                <input type="text" name="last_name" placeholder="Ingresa tus apellidos" required ngModel>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="col-12 m-0 p-2">
+            <label for="email">Ingresa tu correo</label>
+            <input type="text" name="email" placeholder="ingresa tu correo electronico" required ngModel>
+          </div>
+
+          <!-- Username -->
+          <div class="col-12 m-0 p-2">
+            <label for="username">Crea un nombre de usuario</label>
+            <input type="text" name="username" placeholder="Ingresa tu nuevo nombre de usuario" required ngModel>
+          </div>
+
+          <!-- Password -->
+          <div class="col-12 m-0 p-0 row">
+            <div class="col-6 m-0 p-2">
+              <label for="password">Crea una contraseña</label>
+              <input type="password" name="password" placeholder="Ingresa tu nueva contraseña" required ngModel>
+            </div>
+            <div class="col-6 m-0 p-2">
+              <label for="passwordConfirm">Confirma tu contraseña</label>
+              <input type="password" name="passwordConfirm" placeholder="Ingresa de nuevo tu contraseña" required ngModel>
+            </div>
+          </div>
+
+          <div class="col-12 m-0 p-12">
+            <label for="id_subscription">Escoge el tipo de subscripcion que desees:</label>
+            <select name="id_subscription" required ngModel>
+                <option *ngFor="let subscription of subscriptions; let index" value="{{subscription.id_subscription}}" selected>{{subscription.subscription}}</option>
+            </select>
+          </div>
+
+          <div class="col-5 m-0 p-2">
+            <button type="submit" name="button" class="btnSmart btn-mainGreen">Registrarme</button>
+          </div>
+        </form>
       </ng-template>
 
       <div class="d-flex flex-column justify-content-center align-items-center m-0 p-0" *ngIf="!isForm else form">

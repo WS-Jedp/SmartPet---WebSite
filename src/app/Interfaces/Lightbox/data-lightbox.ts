@@ -5,4 +5,5 @@ export interface DataLightbox {
   img?:string;
   subscription?:string;
   contact?:boolean;
+  typeSubscription?:string;
 }

@@ -11,6 +11,7 @@ export class CardPriceComponent implements OnInit {
   @Input() text:string = 'Text of the card';
 
   @Input() fullText:string;
+  @Input() typeSubscription:string;
 
   @Output() actionCardPrice:EventEmitter<object> = new EventEmitter();
 

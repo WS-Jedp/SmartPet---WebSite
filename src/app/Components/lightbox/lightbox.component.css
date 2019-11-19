@@ -16,3 +16,22 @@
   box-shadow: 0 0 18px 1px #a176f4;
   padding: 2rem !important;
 }
+
+#formRegister input[type="text"]{
+  width: 100% !important;
+}
+#formRegister input[type="number"]{
+  width: 100% !important;
+}
+#formRegister input[type="time"]{
+  width: 100% !important;
+}
+#formRegister input[type="password"]{
+  width: 100% !important;
+}
+#formRegister input[type="email"]{
+  width: 100% !important;
+}
+#formRegister textarea{
+  width: 100% !important;
+}

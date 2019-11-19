@@ -339,6 +339,25 @@ footer li{
 }
 /* --------------- Form imputs ------------- */
 
+input[type="email"]{
+  min-width: 40%;
+  padding: 6px;
+  color: #333333;
+  border: solid 2px #a176f4;
+  background-color: none !important;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  box-shadow: 0 0 0px 0px #a176f4;
+  transition: 0.2s ease-out;
+}
+input[type="email"]:focus{
+  box-shadow: 0 0 15px 0px #a176f4;
+}
+
 input[type="text"]{
   min-width: 40%;
   padding: 6px;
@@ -354,6 +373,23 @@ input[type="text"]{
   transition: 0.2s ease-out;
 }
 input[type="text"]:focus{
+  box-shadow: 0 0 15px 0px #a176f4;
+}
+input[type="password"]{
+  min-width: 40%;
+  padding: 6px;
+  color: #333333;
+  border: solid 2px #a176f4;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  box-shadow: 0 0 0px 0px #a176f4;
+  transition: 0.2s ease-out;
+}
+input[type="password"]:focus{
   box-shadow: 0 0 15px 0px #a176f4;
 }
 
@@ -397,6 +433,43 @@ input[type="text"]:focus{
 .form-login input[type="password"]:hover{
   box-shadow: 0 0 0 0 gray;
   font-size: 1rem;
+}
+
+select{
+  min-width: 100%;
+  padding: 6px;
+  color: #000000 !important;
+  border: solid 2px #a176f4;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  box-shadow: 0 0 0px 0px #a176f4;
+  transition: 0.2s ease-out;
+}
+select:focus{
+  box-shadow: 0 0 15px 0px #a176f4;
+}
+
+
+textarea{
+  min-width: 100%;
+  padding: 6px;
+  color: #000000 !important;
+  border: solid 2px #a176f4;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  box-shadow: 0 0 0px 0px #a176f4;
+  transition: 0.2s ease-out;
+}
+textarea:focus{
+  box-shadow: 0 0 15px 0px #a176f4;
 }
 
 .input-login{

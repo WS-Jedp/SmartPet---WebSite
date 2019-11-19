@@ -47,11 +47,11 @@ showLightboxCardSm(data:object){
   this.dataLightbox = data;
   this.lightBox = true;
 }
- // Card Price
+ // --------- Card Price -------------
 showLightboxCardPrice(data){
     this.dataLightbox = data;
     this.lightBox = true;
-    console.log(data)
+    console.log('Data',data)
 }
   // Card Slider
 showLightboxCardSlider(data){

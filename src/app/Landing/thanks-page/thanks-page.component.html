@@ -1,9 +1,13 @@
-<section class="d-flex flex-row justify-content-center align-items-center row bg-gradientPurple m-0 p-0 row thanksPage">
+<ng-template #loading>
+  Loading...
+</ng-template>
+
+<section class="d-flex flex-row justify-content-center align-items-center row bg-gradientPurple m-0 p-0 row thanksPage" *ngIf="!isLoading else loading">
 
 <section class="col-12 col-md-6 d-flex flex-column justify-content-between align-items-start">
   <h1>THANKS FOR JOIN US!!</h1>
   <hr>
-  <h3>WELCOME TO THE FAMILY JUAN! </h3>
+  <h3>WELCOME TO THE FAMILY {{nameClient}}! </h3>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti maxime nesciunt ducimus atque inventore illo, ad quam, debitis ratione, natus ea qui aut repudiandae magnam?
   </p>

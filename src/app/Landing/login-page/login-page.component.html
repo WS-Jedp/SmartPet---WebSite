@@ -8,15 +8,15 @@
     </figure>
   </div>
 
-  <form action="index.html" method="post" class="col-8 col-md-6 d-flex flex-column justify-content-center align-items-center">
+  <form method="post" (ngSubmit)="loginClient(data)" #data="ngForm" class="col-8 col-md-6 d-flex flex-column justify-content-center align-items-center">
 
     <div class="form-login col-8 col-md-6 m-2">
-      <input type="text" placeholder="Ingresa tu usario" id="inputText">
+      <input type="email" placeholder="Ingresa tu usario" id="inputText" name="email" required ngModel>
       <div class="input-login"></div>
     </div>
 
     <div class="form-login col-8 col-md-6 p-3 mb-3">
-      <input type="password" placeholder="Ingresa tu contraseña" id="inputText">
+      <input type="password" placeholder="Ingresa tu contraseña" id="inputText" name="password" required ngModel>
       <div class="input-login"></div>
     </div>
 
